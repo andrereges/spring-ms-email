@@ -23,3 +23,5 @@ In browser set urls:
 - **Spring Boot App:** http://localhost:8080/
 - **MailDev:** http://localhost:1080/
 - **RabbitMQ App:** http://localhost:15672/ - user: admin, password: admin@2021
+
+**Note:** Created database "msemail" in postgres container and used postman to api requests
