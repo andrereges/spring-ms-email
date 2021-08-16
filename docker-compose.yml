@@ -1,0 +1,43 @@
+version: "3"
+services:
+  email:
+    image: maildev/maildev
+    container_name: maildev
+    ports:
+      - "1080:80"
+      - "1025:25"
+    networks:
+      - ms-email-network
+
+  broker:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq-server
+    ports:
+      - 15672:15672
+      - 5672:5672
+    labels:
+      NAME: rabbitmq
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+      - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+
+  db:
+    image: postgres:13-alpine
+    container_name: postgres-v13
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    networks:
+      - ms-email-network
+
+volumes:
+  rabbitmq_data:
+  postgres_data:
+
+networks:
+  ms-email-network:
+    driver: bridge

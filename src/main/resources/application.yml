@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/msemail
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  mail:
+    host: localhost
+    port: 1025
+    username: hello
+    password: hello
+
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+
+  rabbitmq:
+#    addresses: amqps://admin:admin2021@localhost:5672/vhost
+    queue: "ms.email"
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin2021
+    virtualHost: vhost
+    ssl:
+      enabled: false
+#      algorithm: TLSv1.2
+#      key-store: classpath:/rmq_wr.uat.p12
+#      key-store-password: "****"
