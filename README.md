@@ -3,7 +3,7 @@ Project built to implement synchronous and asynchronous email microservice with 
 
 Technologies used:
 
-- Spring Data, Validation, Mail, Web, AMQP, Test
+- Spring Data with java 11
 - RabbitMQ
 - Postgresql
 - Lombok
@@ -24,4 +24,6 @@ In browser set urls:
 - **MailDev:** http://localhost:1080/
 - **RabbitMQ App:** http://localhost:15672/ - user: admin, password: admin@2021
 
-**Note:** Created database "msemail" in postgres container and used postman to api requests
+**Note:** Used postman to api request and created database "msemail" in postgres container
+
+https://www.postman.com/
