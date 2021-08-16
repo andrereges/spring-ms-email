@@ -20,5 +20,6 @@ In root project run command:
 
 In browser set urls:
 
+- **Spring Boot App:** http://localhost:8080/
 - **MailDev:** http://localhost:1080/
-- **RabbitMQ App:** http://localhost:15672/
+- **RabbitMQ App:** http://localhost:15672/ - user: admin, password: admin@2021
