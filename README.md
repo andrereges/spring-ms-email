@@ -3,8 +3,7 @@ Project built to implement synchronous and asynchronous email microservice with 
 
 Technologies used:
 
-- Java 11
-- Spring Data, Validation, Mail, Web, AMQP, Test
+- Spring Data with java 11
 - RabbitMQ
 - Postgresql
 - Lombok
@@ -24,3 +23,6 @@ In browser set urls:
 - **Spring Boot App:** http://localhost:8080/
 - **MailDev:** http://localhost:1080/
 - **RabbitMQ App:** http://localhost:15672/ - user: admin, password: admin@2021
+
+**Note:** Used postman to api request
+https://www.postman.com/
