@@ -3,6 +3,7 @@ Project built to implement synchronous and asynchronous email microservice with 
 
 Technologies used:
 
+- Java 11
 - Spring Data, Validation, Mail, Web, AMQP, Test
 - RabbitMQ
 - Postgresql
